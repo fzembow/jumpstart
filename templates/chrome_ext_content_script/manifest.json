@@ -1,0 +1,12 @@
+{
+  "name": "@!name!@",
+  "version": "0.1",
+  "description": "Chrome extension - content script.",
+  "content_scripts": [
+    {
+      "matches": ["@!site_url!@"],
+      "css": ["content_style.css"],
+      "js": [<!--(if use_jquery)-->"jquery.min.js", <!--(end)-->"content_script.js"]
+    }
+  ]
+}

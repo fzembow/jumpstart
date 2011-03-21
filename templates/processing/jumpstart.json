@@ -1,0 +1,9 @@
+{
+    "create_files": [
+        {
+			"template":"main.pde",
+			"name":"%s.pde"
+        }
+    ], 
+    "name": "processing"
+}

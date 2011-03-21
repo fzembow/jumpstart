@@ -1,0 +1,17 @@
+{
+    "create_files": [
+		{
+			"template":"init.js"
+		},
+		{
+			"template":"processing-1.1.0.js"
+		},
+		{
+			"template":"style.css"
+		},
+		{
+			"template":"index.html"
+		}
+    ], 
+    "name": "processingjs"
+}

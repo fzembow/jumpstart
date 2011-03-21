@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+        <title>@!name!@</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script src="./processing-1.0.0.js"></script>
+		<script src="./init.js"></script>
+	</head>
+	<body>
+	    <!-- you can call functions in the processing script as processing_canvas.function_name() -->
+		<script type="application/processing" target="processing_js">
+
+		  void setup(){
+		  size(400,400);
+		  }
+
+		  void draw(){
+		  ellipse(20,30,40,50);
+		  }
+
+		</script>
+		<canvas id="processing_js" width="400" height="400">You need an HTML-5 enabled browser to view this content</canvas>
+	</body>
+<html>

@@ -1,0 +1,32 @@
+{
+    "create_files": [
+        {
+			"template":"manifest.json" 
+        },
+		{
+			"template":"content_script.js" 
+        },
+		{
+			"template":"content_style.css"
+		},
+		{
+			"template":"jquery.min.js"
+		}
+    ], 
+    "name": "chrome_ext_content_script",
+	"variables": [
+		{
+			"name": "site_url",
+			"description": "What URL pattern do you want to insert the content script into?",
+			"type": "String",
+			"default": "http://*/*"
+			 
+		},
+		{
+			"name": "use_jquery",
+			"description": "Do you want to insert jQuery into the page?",
+			"type": "Boolean",
+			"default": "True"
+		}
+	]
+}

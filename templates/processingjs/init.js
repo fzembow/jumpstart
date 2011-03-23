@@ -18,7 +18,7 @@ if (window.addEventListener) {
         if (src && src.indexOf("#") > -1) {
           canvas = document.getElementById(src.substr(src.indexOf("#") + 1));
           if (canvas) {
-            my_processing = new Processing(canvas, scripts[i].text);
+            processing_canvas = new Processing(canvas, scripts[i].text);
             for (var k = 0; k< canvasArray.length; k++)
             {
               if (canvasArray[k] === canvas) {

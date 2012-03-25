@@ -2,8 +2,7 @@
 
 This is a personal utility I use to quickly create skeleton files for small experiments in programming. 
 
-Project types
----
+### Project types
 
 * Basic HTML5 page
 * Jade HTML5 page with Twitter's Bootstrap
@@ -12,8 +11,7 @@ Project types
 * Processing
 * ProcessingJS
 
-Installation
----
+### Installation
     
 Clone the repository:
 
@@ -21,15 +19,14 @@ Clone the repository:
     
 To make sure that jumpstart is in your path, run the following in your shell:
 
-    JUMP=jumpstart/jumpstart.py
-    sudo ln -s /usr/local/bin/jumpstart JUMP
+    JUMP=`pwd`/jumpstart/jumpstart.py
+    sudo ln -s $JUMP /usr/local/bin/jumpstart
 
 Test that it's working:
 
     jumpstart
 
-Usage
----
+### Usage
 
 To list all of the available templates, just type `jumpstart`.
 To create a directory from one of the templates, type `jumpstart TEMPLATE_NAME`.
@@ -38,8 +35,7 @@ Then follow the prompts.
 Your new project will be created in a directory from which you ran `jumpstart`
 
 
-Adding new templates
----
+### Adding new templates
 
 For now, just copy an existing template, making sure to fill out jumpstart.json with
 the files and variables that you require. Variables are replaced within files according to

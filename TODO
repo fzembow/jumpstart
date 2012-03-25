@@ -1,5 +1,4 @@
 # todo:
 
-support for nested directories in templates
-support for conditional files
-installer
+support for conditional inclusion of files
+add "jumpstart init" command to make a template out of a directory

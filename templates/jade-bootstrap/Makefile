@@ -1,12 +1,12 @@
-JADE = $(shell find pages/*.jade)
+JADE = $(shell find *.jade)
 HTML = $(JADE:.jade=.html)
 
 all: $(HTML)
 
 %.html: %.jade
-    jade < $< --path $< > $@
+	jade < $< --path $< > $@
 
 clean:
-    rm -f $(HTML)
+	rm -f $(HTML)
 
 .PHONY: clean

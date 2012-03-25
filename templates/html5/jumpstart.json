@@ -1,14 +1,14 @@
 {
     "create_files": [
         {
-			"template":"index.html" 
+          "template":"index.html" 
         },
-		{
-			"template":"style.css" 
+        {
+          "template":"style.css" 
         },
-		{
-			"template":"script.js"
-		}
+        {
+          "template":"script.js"
+        }
     ], 
     "name": "html5",
 	"variables": [

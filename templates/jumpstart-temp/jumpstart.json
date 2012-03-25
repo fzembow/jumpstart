@@ -1,9 +1,0 @@
-{
-    "create_files": [
-        {
-			"template":"jumpstart-temp.json",
-			"name":"jumpstart.json"
-        }
-    ], 
-    "name": "jumpstart-template"
-}

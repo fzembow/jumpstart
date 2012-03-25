@@ -34,13 +34,13 @@ def init():
 
     #parse configuration into dictionary
     try:
-        conf = json.load(fp)
+        config = json.load(fp)
     except ValueError:
         print messages.invalid_conf % (app_dir + "jumpstart.json")
         sys.exit(1)
 
     #process the configuration and create the new app
-    process_app(conf, app_dir)
+    process_app(config, app_dir)
 
 def process_app(conf, app_dir):
 
@@ -75,16 +75,20 @@ def process_app(conf, app_dir):
             if os.path.exists(app_dir + file_name):
                 #copy existing file
                 t = pyratemp.Template(filename=app_dir + file_name)
-                result = t(**pyratemp.dictkeyclean(params))
-
-                f = open(dest_dir + name, "w")
-                f.write(result.encode("utf-8"))
-                f.close()
+                contents = t(**pyratemp.dictkeyclean(params)).encode("utf-8")
             else:
                 #create blank file
-                f = open(dest_dir + name, "w")
-                f.write("")
-                f.close()
+                contents = ""
+
+            #create directories in target if necessary
+            target_dir = os.path.dirname(name)
+            if target_dir and not os.path.exists(dest_dir + target_dir):
+              os.makedirs(dest_dir + target_dir)
+
+            f = open(dest_dir + name, "w")
+            f.write(contents)
+            f.close()
+
     except KeyError:
         pass
 
@@ -118,9 +122,6 @@ def process_variables(conf):
         pass
 
     return params
-
-def create_new_app():
-    pass
 
 def list_apps():
     print messages.list_apps

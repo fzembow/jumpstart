@@ -1,0 +1,32 @@
+{
+    "create_files": [
+        {
+          "template":"index.jade" 
+        },
+        {
+          "template":"css/style.css" 
+        },
+        {
+          "template":"css/bootstrap-responsive.min.css" 
+        },
+        {
+          "template":"css/bootstrap.min.css" 
+        },
+        {
+          "template":"script.js"
+        },
+        {
+          "template":"Makefile"
+        }
+
+    ], 
+    "name": "jade-bootstrap",
+	"variables": [
+		{
+			"name": "use_jquery",
+			"description": "Do you want to include jQuery?",
+			"type": "Boolean",
+			"default": "True"
+		}
+	]
+}
